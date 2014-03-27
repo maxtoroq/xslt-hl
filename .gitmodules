@@ -1,0 +1,3 @@
+[submodule "xmlspectrum"]
+	path = xmlspectrum
+	url = https://github.com/maxtoroq/xmlspectrum.git

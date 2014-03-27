@@ -1,0 +1,60 @@
+﻿<html>
+<head>
+   <title>XSLT/XPath Syntax Highlighter</title>
+   <link id="theme-css" href="vs-light.css" rel="stylesheet" />
+   <style>
+      pre { font-size: 15px; }
+      select, input { font-family: inherit; font-size: inherit; }
+      #theme-link { text-decoration: none; }
+      #options { font-size: 85%; }
+      #options .option { float: left; white-space: nowrap; }
+   </style>
+   <script src="saxonce/Saxonce/Saxonce.nocache.js"></script>
+   <script src="index.xsl" type="application/xslt+xml" language="xslt2.0" data-initial-template="main"></script>
+</head>
+<body>
+   <h1 style="margin-bottom:0">XSLT/XPath Syntax Highlighter</h1>
+   <p style="margin-top:0">Powered by <a href="https://github.com/pgfearo/xmlspectrum">XMLspectrum</a> and <a href="https://github.com/Saxonica/Saxon-CE">Saxon CE</a></p>
+
+   <table width="100%">
+      <tr>
+         <td style="width:50%">
+            <textarea id="source" rows="10" style="width:100%" placeholder="Enter XSLT or XPath"></textarea>
+         </td>
+         <td style="width:50%">
+            <textarea id="output" rows="10" style="width:100%"></textarea>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <div style="float:right;">
+               <button id="highlight" style="font-weight:bold">Highlight</button>
+               <button id="clear">Clear</button>
+            </div>
+
+            <div id="options">
+               <span class="option">
+                  <span>Theme: </span>
+                  <select id="themes">
+                     <option value="vs-light.css">Visual Studio Light</option>
+                     <option value="xmlspectrum/app/output-light/theme.css">Light</option>
+                     <option value="xmlspectrum/app/theme.css">Dark</option>
+                  </select>
+                  <a id="theme-link" href="vs-light.css" title="Download CSS">↓</a>
+                  &nbsp;&nbsp;
+               </span>
+               <span class="option">
+                  <span>XSLT prefix: </span>
+                  <input id="xslt-prefix" value="xsl" maxlength="10" size="1" />
+               </span>
+            </div>
+         </td>
+         <td></td>
+      </tr>
+   </table>
+
+   <hr />
+   <div id="rendered-output"></div>
+
+</body>
+</html>
